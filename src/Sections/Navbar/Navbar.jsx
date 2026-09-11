@@ -1,3 +1,5 @@
+import { FiShoppingCart } from "react-icons/fi";
+
 const Navbar = () => {
   return (
     <nav className="bg-base-100 shadow-sm">
@@ -27,21 +29,21 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             <li>
-              <a>Item 1</a>
+              <a>Products </a>
             </li>
             <li>
-              <a>Parent</a>
+              <a>Features</a>
               <ul className="p-2">
                 <li>
-                  <a>Submenu 1</a>
+                  <a>Feature 1</a>
                 </li>
                 <li>
-                  <a>Submenu 2</a>
+                  <a>Feature 2</a>
                 </li>
               </ul>
             </li>
             <li>
-              <a>Item 3</a>
+              <a>Blogs</a>
             </li>
           </ul>
         </div>
@@ -51,28 +53,30 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <a>Item 1</a>
+            <a>Products</a>
           </li>
           <li>
             <details>
-              <summary>Parent</summary>
+              <summary>Features</summary>
               <ul className="p-2 bg-base-100 w-40 z-1">
                 <li>
-                  <a>Submenu 1</a>
+                  <a>Feature 1</a>
                 </li>
                 <li>
-                  <a>Submenu 2</a>
+                  <a>Feature 2</a>
                 </li>
               </ul>
             </details>
           </li>
           <li>
-            <a>Item 3</a>
+            <a>Blogs</a>
           </li>
         </ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn">Button</a>
+      <div className="navbar-end gap-4">
+      <div className="relative"><FiShoppingCart/> <span className="absolute -top-4 -right-2 text-secondary font-extrabold">0</span></div>
+        <a className="font-semibold">Login</a>
+        <a className="btn gradient-primary font-semibold text-white rounded-full">Get Started</a>
       </div>
      </div>
     </nav>
