@@ -181,5 +181,4 @@ Possible future enhancements include:
 
 ## License
 
-This project is for learning and development purposes. Add your
-preferred license here if the project will be distributed publicly.
+This project is for learning and development purposes.
