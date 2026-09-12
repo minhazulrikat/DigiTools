@@ -1,13 +1,18 @@
-import { useState } from "react";
+import { Suspense, useState } from "react";
+import ProductList from "./ProductList";
+import CartItemList from "./CartItemList";
 
-const PremiumDigitalTools = () => {
+const productsData = fetch("/productsData.json").then((res) => res.json());
+
+const PremiumDigitalTools = ({addToCart,setAddToCart,totalCartItem}) => {
   const [currentTab, setCurrentTab] = useState("Products");
+
   const tabHandler = (tab) => {
     setCurrentTab(tab);
   };
   return (
     <section>
-      <div className="container mx-auto py-32">
+      <div className="container max-w-300 mx-auto py-32 space-y-10">
         {/* heading text wrapper  */}
         <div className="text-center space-y-4 flex flex-col w-full justify-center items-center">
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-extrabold">
@@ -34,13 +39,26 @@ const PremiumDigitalTools = () => {
               }}
               className={`btn ${currentTab === "Cart" ? " gradient-primary text-white " : " btn-ghost "} rounded-full`}
             >
-              Cart(0)
+              Cart ({ totalCartItem })
             </button>
           </div>
         </div>
 
-       {/* Product and cart, cards container */}
-       
+        {/* Product and cart, cards container */}
+        <div className="container mx-auto">
+          
+          {currentTab==="Products"?<Suspense
+            fallback={
+              <div className="flex items-center justify-center min-h-[60vh]">
+                <span className="loading loading-bars loading-xl"></span>
+              </div>
+            }
+          >
+            <ProductList addToCart={addToCart} setAddToCart={setAddToCart} productsData={productsData}></ProductList>
+          </Suspense>:
+          <CartItemList setAddToCart={setAddToCart} addToCart={addToCart}></CartItemList>
+          }
+        </div>
       </div>
     </section>
   );

@@ -6,13 +6,12 @@
     "price": 29,
     "billing": "Mo",
     "badge": "Best Seller",
-    "icon": "📝",
+    "icon": "https://i.ibb.co.com/wZKgsL5k/design-tool.png",
     "features": [
       "Unlimited AI generations",
       "50+ writing templates",
       "Grammar checker"
-    ],
-    "buttonText": "Buy Now"
+    ]
   },
   {
     "id": 2,
@@ -21,13 +20,8 @@
     "price": 49,
     "billing": "One-Time",
     "badge": "Popular",
-    "icon": "✏️",
-    "features": [
-      "2000+ templates",
-      "Monthly updates",
-      "Commercial license"
-    ],
-    "buttonText": "Buy Now"
+    "icon": "https://i.ibb.co.com/6RsLMZLs/operation.png",
+    "features": ["2000+ templates", "Monthly updates", "Commercial license"]
   },
   {
     "id": 3,
@@ -36,13 +30,8 @@
     "price": 19,
     "billing": "Mo",
     "badge": "New",
-    "icon": "📷",
-    "features": [
-      "10M+ assets",
-      "Commercial use",
-      "No attribution"
-    ],
-    "buttonText": "Buy Now"
+    "icon": "https://i.ibb.co.com/wrwgb40L/portfolio.png",
+    "features": ["10M+ assets", "Commercial use", "No attribution"]
   },
   {
     "id": 4,
@@ -51,13 +40,8 @@
     "price": 79,
     "billing": "Mo",
     "badge": "Popular",
-    "icon": "⚙️",
-    "features": [
-      "50+ automations",
-      "API access",
-      "Custom workflows"
-    ],
-    "buttonText": "Buy Now"
+    "icon": "https://i.ibb.co.com/SwHshJQv/camera-8775444-1.png",
+    "features": ["50+ automations", "API access", "Custom workflows"]
   },
   {
     "id": 5,
@@ -66,13 +50,8 @@
     "price": 15,
     "billing": "One-Time",
     "badge": "New",
-    "icon": "📄",
-    "features": [
-      "100+ templates",
-      "ATS optimization",
-      "Export to PDF"
-    ],
-    "buttonText": "Buy Now"
+    "icon": "https://i.ibb.co.com/39c16hmJ/social-media.png",
+    "features": ["100+ templates", "ATS optimization", "Export to PDF"]
   },
   {
     "id": 6,
@@ -81,12 +60,7 @@
     "price": 39,
     "billing": "Mo",
     "badge": "Best Seller",
-    "icon": "💬",
-    "features": [
-      "5000+ assets",
-      "Scheduler included",
-      "Analytics dashboard"
-    ],
-    "buttonText": "Buy Now"
+    "icon": "https://i.ibb.co.com/3YFbQ8SW/writing-2327400-1.png",
+    "features": ["5000+ assets", "Scheduler included", "Analytics dashboard"]
   }
 ]
