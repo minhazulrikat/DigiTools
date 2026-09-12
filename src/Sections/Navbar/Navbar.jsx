@@ -75,7 +75,7 @@ const Navbar = ({ totalCartItem, handleCartClick }) => {
             </li>
           </ul>
         </div>
-        <div className="navbar-end gap-4">
+        <div className="navbar-end gap-2 sm:gap-3 md:gap-4">
           <div onClick={handleCartClick} className="relative cursor-pointer">
             <FiShoppingCart />{" "}
             <span className="absolute -top-4 -right-2 text-secondary font-extrabold">
