@@ -1,6 +1,6 @@
 import { FiShoppingCart } from "react-icons/fi";
 
-const Navbar = ({ totalCartItem }) => {
+const Navbar = ({ totalCartItem, handleCartClick }) => {
   return (
     <nav className="bg-base-100 shadow-sm">
       <div className="container max-w-300 mx-auto navbar">
@@ -76,7 +76,7 @@ const Navbar = ({ totalCartItem }) => {
           </ul>
         </div>
         <div className="navbar-end gap-4">
-          <div className="relative">
+          <div onClick={handleCartClick} className="relative cursor-pointer">
             <FiShoppingCart />{" "}
             <span className="absolute -top-4 -right-2 text-secondary font-extrabold">
               {totalCartItem}

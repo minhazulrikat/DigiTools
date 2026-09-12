@@ -1,12 +1,16 @@
-import { Suspense, useState } from "react";
+import { Suspense } from "react";
 import ProductList from "./ProductList";
 import CartItemList from "./CartItemList";
 
 const productsData = fetch("/productsData.json").then((res) => res.json());
 
-const PremiumDigitalTools = ({addToCart,setAddToCart,totalCartItem}) => {
-  const [currentTab, setCurrentTab] = useState("Products");
-
+const PremiumDigitalTools = ({
+  addToCart,
+  setAddToCart,
+  totalCartItem,
+  setCurrentTab,
+  currentTab,
+}) => {
   const tabHandler = (tab) => {
     setCurrentTab(tab);
   };
@@ -15,7 +19,7 @@ const PremiumDigitalTools = ({addToCart,setAddToCart,totalCartItem}) => {
       <div className="container max-w-300 mx-auto py-32 space-y-10">
         {/* heading text wrapper  */}
         <div className="text-center space-y-4 flex flex-col w-full justify-center items-center">
-          <h2 className="text-3xl sm:text-4xl md:text-6xl font-extrabold">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold">
             Premium Digital Tools
           </h2>
           <p className="text-base-content/60">
@@ -39,25 +43,33 @@ const PremiumDigitalTools = ({addToCart,setAddToCart,totalCartItem}) => {
               }}
               className={`btn ${currentTab === "Cart" ? " gradient-primary text-white " : " btn-ghost "} rounded-full`}
             >
-              Cart ({ totalCartItem })
+              Cart ({totalCartItem})
             </button>
           </div>
         </div>
 
         {/* Product and cart, cards container */}
-        <div className="container mx-auto">
-          
-          {currentTab==="Products"?<Suspense
-            fallback={
-              <div className="flex items-center justify-center min-h-[60vh]">
-                <span className="loading loading-bars loading-xl"></span>
-              </div>
-            }
-          >
-            <ProductList addToCart={addToCart} setAddToCart={setAddToCart} productsData={productsData}></ProductList>
-          </Suspense>:
-          <CartItemList setAddToCart={setAddToCart} addToCart={addToCart}></CartItemList>
-          }
+        <div id="premium-tools" className="container mx-auto">
+          {currentTab === "Products" ? (
+            <Suspense
+              fallback={
+                <div className="flex items-center justify-center min-h-[60vh]">
+                  <span className="loading loading-bars loading-xl"></span>
+                </div>
+              }
+            >
+              <ProductList
+                addToCart={addToCart}
+                setAddToCart={setAddToCart}
+                productsData={productsData}
+              ></ProductList>
+            </Suspense>
+          ) : (
+            <CartItemList
+              setAddToCart={setAddToCart}
+              addToCart={addToCart}
+            ></CartItemList>
+          )}
         </div>
       </div>
     </section>

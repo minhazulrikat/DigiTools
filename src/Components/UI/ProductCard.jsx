@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 const ProductCard = ({ product, setAddToCart, addToCart }) => {
   const { title, description, price, billing, badge, icon, features } = product;
@@ -7,6 +8,7 @@ const ProductCard = ({ product, setAddToCart, addToCart }) => {
     if (addToCart.some((item) => item.id === product.id)) {
       return;
     }
+    toast.success("Item added to cart");
     setAddToCart([...addToCart, product]);
     setIsAdded(true);
     setTimeout(() => {
@@ -74,9 +76,9 @@ const ProductCard = ({ product, setAddToCart, addToCart }) => {
         <div className="w-full">
           <button
             onClick={handleAddToCart}
-            className={`${isAdded?"btn-success ":"gradient-primary "} rounded-full text-white btn btn-block text-base py-3 transition-all duration-300`}
+            className={`${isAdded ? "btn-success " : "gradient-primary "} rounded-full text-white btn btn-block text-base py-3 transition-all duration-300`}
           >
-            {isAdded?"Added to Cart":"Buy Now"}
+            {isAdded ? "Added to Cart" : "Buy Now"}
           </button>
         </div>
       </div>
