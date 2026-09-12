@@ -2,6 +2,7 @@ import { useState } from "react";
 import Navbar from "./Sections/Navbar/Navbar";
 import PremiumDigitalTools from "./Sections/PremiumDigitalTools/PremiumDigitalTools";
 import Hero from "./Sections/Hero/Hero";
+import Stats from "./Sections/Stats/Stats";
 
 function App() {
   const [addToCart, setAddToCart] = useState([]);
@@ -22,6 +23,7 @@ function App() {
         totalCartItem={totalCartItem}
       ></Navbar>
       <Hero></Hero>
+      <Stats></Stats>
       <PremiumDigitalTools
         currentTab={currentTab}
         setCurrentTab={setCurrentTab}
