@@ -48,7 +48,7 @@ const Navbar = ({ totalCartItem, handleCartClick }) => {
             </ul>
           </div>
           {/* "gradient primary" is a custom css class added into index.css*/}
-          <a className=" text-3xl font-extrabold gradient-primary text-transparent bg-clip-text ">
+          <a className=" text-xl sm:text-2xl font-extrabold gradient-primary text-transparent bg-clip-text ">
             DigiTools
           </a>
         </div>
@@ -82,7 +82,7 @@ const Navbar = ({ totalCartItem, handleCartClick }) => {
               {totalCartItem}
             </span>
           </div>
-          <a className="font-semibold">Login</a>
+          <a className="font-semibold sm:tex-base text-sm">Login</a>
           <a className="btn gradient-primary font-semibold text-white rounded-full">
             Get Started
           </a>
