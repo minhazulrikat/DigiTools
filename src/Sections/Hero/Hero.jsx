@@ -5,12 +5,13 @@ const Hero = () => {
   return (
     <section className="hero bg-base-100 min-h-screen py-15">
       <div className="hero-content flex-col lg:flex-row-reverse gap-15">
-        <img
+        <div className="lg:max-w-2/5"><img
+
           alt="hero component"
           src={Banner}
-          className="max-w-lg rounded-lg shadow-md"
-        />
-        <div className="lg:max-w-[60%] space-y-8">
+          className="w-full h-auto rounded-lg shadow-md"
+        /></div>
+        <div className="lg:max-w-3/5 space-y-8">
            <div className="space-y-4">
             {/* content wrapper */}
              <div>
