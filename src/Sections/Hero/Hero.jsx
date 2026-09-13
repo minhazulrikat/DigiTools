@@ -27,7 +27,7 @@ const Hero = () => {
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight">
               Supercharge Your <br /> Digital Workflow
             </h1>
-            <p className="leading-loose text-base-content/60 text-lg">
+            <p className="leading-loose text-base-content/60 md:text-lg">
               Access premium AI tools, design assets, templates, and
               productivity <br />
               software—all in one place. Start creating faster today. <br />{" "}

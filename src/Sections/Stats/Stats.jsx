@@ -1,7 +1,7 @@
 const Stats = () => {
   return (
     <div className="flex justify-center items-center gradient-primary text-white py-15">
-      <div className="container m-auto stats stats-vertical space-y-10 sm:stats-horizontal w-full text-center sm:justify-evenly max-w-300">
+      <div className="container  stats stats-vertical gap-6 sm:stats-horizontal w-full text-center justify-evenly max-w-300">
         <div className="my-auto space-y-3">
           <div className="stat-value text-4xl sm:text-5xl md:text-6xl">31K</div>
           <div className="stat-title text-base text-white/80 ">Downloads</div>
