@@ -1,6 +1,20 @@
+import { useEffect, useState } from "react";
 import { FiShoppingCart } from "react-icons/fi";
+import NavItem from "./NavItem";
 
 const Navbar = ({ totalCartItem, handleCartClick }) => {
+
+  const [navItems,setNavItems] = useState([]);
+
+  useEffect(()=>{
+    const loadNavData = async ()=>{
+      const  res= await fetch('/navData.json');
+      const data = await res.json();
+      setNavItems(data);
+    }
+    loadNavData();
+  },[])
+
   return (
     <nav className="bg-base-100 shadow-sm">
       <div className="container max-w-300 mx-auto navbar">
@@ -27,24 +41,11 @@ const Navbar = ({ totalCartItem, handleCartClick }) => {
             <ul
               tabIndex={-1}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
-            >
-              <li>
-                <a>Products </a>
-              </li>
-              <li>
-                <a>Features</a>
-                <ul className="p-2">
-                  <li>
-                    <a>Feature 1</a>
-                  </li>
-                  <li>
-                    <a>Feature 2</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a>Blogs</a>
-              </li>
+            >{
+              navItems.map((navItem)=>{
+                return <NavItem key={navItem.id} navItem={navItem}></NavItem>;
+              })
+            }             
             </ul>
           </div>
           {/* "gradient primary" is a custom css class added into index.css*/}
@@ -54,25 +55,11 @@ const Navbar = ({ totalCartItem, handleCartClick }) => {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
-            <li>
-              <a>Products</a>
-            </li>
-            <li>
-              <details>
-                <summary>Features</summary>
-                <ul className="p-2 bg-base-100 w-40 z-1">
-                  <li>
-                    <a>Feature 1</a>
-                  </li>
-                  <li>
-                    <a>Feature 2</a>
-                  </li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <a>Blogs</a>
-            </li>
+           {
+              navItems.map((navItem)=>{
+                return <NavItem key={navItem.id} navItem={navItem}></NavItem>;
+              })
+            }
           </ul>
         </div>
         <div className="navbar-end gap-2 sm:gap-3 md:gap-4">
