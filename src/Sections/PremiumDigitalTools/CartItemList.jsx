@@ -22,10 +22,10 @@ const CartItemList = ({ addToCart, setAddToCart }) => {
       ) : (
         <div className="space-y-6">
           <h2 className="text-2xl font-bold">Your Cart</h2>
-          {addToCart.map((cartItem, index) => {
+          {addToCart.map((cartItem) => {
             return (
               <Cart
-                key={index}
+                key={cartItem.id}
                 cartItem={cartItem}
                 setAddToCart={setAddToCart}
               ></Cart>

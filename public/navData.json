@@ -2,26 +2,26 @@
   {
     "id": 1,
     "name": "Products",
-    "href": "#products"
+    "href": "#"
   },
   {
     "id": 2,
     "name": "Features",
-    "href": "#features"
+    "href": "#"
   },
   {
     "id": 3,
     "name": "Pricing",
-    "href": "#pricing"
+    "href": "#"
   },
   {
     "id": 4,
     "name": "Testimonials",
-    "href": "#testimonials"
+    "href": "#"
   },
   {
     "id": 5,
     "name": "FAQ",
-    "href": "#faq"
+    "href": "#"
   }
 ]
