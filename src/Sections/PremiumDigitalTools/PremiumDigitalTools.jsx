@@ -15,8 +15,8 @@ const PremiumDigitalTools = ({
     setCurrentTab(tab);
   };
   return (
-    <section>
-      <div className="container max-w-300 mx-auto py-15 sm:py-20 md:py-24 lg:py-32 space-y-10">
+    <section id="products">
+      <div className="container max-w-300 mx-auto py-15 sm:py-20 md:py-24 lg:py-32 space-y-10 px-4">
         {/* heading text wrapper  */}
         <div className="text-center space-y-4 flex flex-col w-full justify-center items-center">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold">

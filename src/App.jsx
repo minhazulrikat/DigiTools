@@ -5,6 +5,8 @@ import Hero from "./Sections/Hero/Hero";
 import Stats from "./Sections/Stats/Stats";
 import Footer from "./Sections/Footer/Footer";
 import ThreeStep from "./Sections/ThreeStep/ThreeStep";
+import PricingCards from "./Sections/PricingCards/PricingCards";
+import CTA from "./Sections/CTA/CTA";
 
 function App() {
   const [addToCart, setAddToCart] = useState([]);
@@ -34,6 +36,8 @@ function App() {
         totalCartItem={totalCartItem}
       ></PremiumDigitalTools>
       <ThreeStep></ThreeStep>
+      <PricingCards></PricingCards>
+      <CTA></CTA>
       <Footer></Footer>
     </>
   );

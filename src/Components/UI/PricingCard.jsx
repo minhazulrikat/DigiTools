@@ -1,25 +1,20 @@
-import React from 'react';
-
-const PricingCard = () => {
-    return (
-         <div className="card bg-base-100 border-2 border-base-300 rounded-2xl">
+const PricingCard = ({ card }) => {
+  const { features, billing, price, description, title, buttonText, badge } =
+    card;
+  return (
+    <div className={`card ${badge ? " gradient-primary text-white ":" bg-base-100 "} border-2 border-base-300 rounded-2xl`}>
       <div className="card-body relative gap-4">
-       
-        {/* card image */}
-        <div className="h-15 w-15 rounded-full border border-base-300 p-3 flex items-center justify-center">
-          <img className="w-full h-full object-contain" src='' alt="" />
-        </div>
         {/* heading and paragraph */}
         <div className="space-y-4">
-          <h2 className="text-2xl font-bold">Starter</h2>
-          <p className="text-base-content/60 text-base">Perfect for getting started</p>
+          <h2 className="text-2xl font-bold">{title}</h2>
+          <p className={`${badge ? ' text-base-100/80 ': ' text-base-content/60 '} text-base`}>{description}</p>
         </div>
         {/* price and duration  */}
         <div>
           <h2 className="text-2xl font-bold">
-            $0
-            <span className="text-base text-base-content/60 font-normal">
-              /month
+            ${price}
+            <span className={`text-base ${badge ? ' text-base-100/80 ': ' text-base-content/60 '} font-normal`}>
+              /{billing}
             </span>
           </h2>
         </div>
@@ -42,7 +37,7 @@ const PricingCard = () => {
                     d="M5 13l4 4L19 7"
                   />
                 </svg>
-                <span className="text-base text-base-content/60">
+                <span className={`text-base ${badge ? " text-base-100/80 ": " text-base-content/60 "}`}>
                   {feature}
                 </span>
               </li>
@@ -52,15 +47,14 @@ const PricingCard = () => {
         {/* action button  */}
         <div className="w-full">
           <button
-            onClick={handleAddToCart}
-            className={`${isAdded ? "btn-success " : "gradient-primary "} rounded-full text-white btn btn-block text-base py-3 transition-all duration-300`}
+            className={` ${badge ? " bg-base-100 " : " gradient-primary "} rounded-full btn btn-block text-base py-3 transition-all duration-300`}
           >
-            {isAdded ? "Added to Cart" : "Buy Now"}
+            <span className={`${badge ? ' gradient-primary bg-clip-text text-transparent ': ' text-white '}`}>{buttonText}</span>
           </button>
         </div>
       </div>
     </div>
-    );
+  );
 };
 
 export default PricingCard;
