@@ -33,6 +33,9 @@ const CTA = () => {
           
             </a>
           </div>
+          <div className="text-white/60">
+            <p>14-day free trial • No credit card required • Cancel anytime</p>
+          </div>
         </div>
       </div>
     </section>
