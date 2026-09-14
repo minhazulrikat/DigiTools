@@ -35,10 +35,10 @@ const Hero = () => {
             </p>
           </div>
           <div className="flex gap-4 items-center">
-            <button className="btn gradient-primary text-white font-bold rounded-full">
+            <a href="#products" className="btn gradient-primary text-white font-bold rounded-full">
               {" "}
               Explore Products
-            </button>
+            </a>
             <button className="btn btn-outline btn-primary text-transparent bg-clip-text gradient-primary text-base font-bold rounded-full">
               {" "}
               <img src={Play} alt="playbutton" />
