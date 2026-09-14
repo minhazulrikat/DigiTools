@@ -5,7 +5,7 @@ const threeStepData = fetch("/threeStepData.json").then(res=> res.json());
 const ThreeStep = () => {
   return (
     <div className="bg-base-200 ">
-      <div className="container mx-auto px-4 py-15 md:py-20 lg:py-30 space-y-10">
+      <div className="container max-w-300 mx-auto px-4 py-15 md:py-20 lg:py-30 space-y-10">
         <div className="flex justify-center flex-col text-center space-y-4">
         <h3 className="text-3xl sm:text-4xl md:text-5xl font-extrabold">
           Get Started in 3 Steps
